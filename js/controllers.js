@@ -2,28 +2,10 @@
 var myApp = angular.module('myApp', []);
 
 //here's a controller
-myApp.controller('MyController', function MyController($scope){
-	//here's a model
-	$scope.people = [
-		{
-			'name'   : 'brneton',
-			'title'  : 'web dever',
-			'company': 'shoutleaf'
-		},
-		{
-			'name'   : 'brenton1',
-			'title'  : 'web dever1',
-			'company': 'shoutleaf1'
-		},
-		{
-			'name'   : 'me2',
-			'title'  : 'web dever2',
-			'company': 'shoutleaf2'
-		},
-		{
-			'name'   : 'me3',
-			'title'  : 'web dever3',
-			'company': '333333'
-		}
-	]
+myApp.controller('MyController', function MyController($scope, $http){
+
+	$http.get('js/people.json').success(function(data){
+		//here's a model
+		$scope.people = data;
+	});
 });
