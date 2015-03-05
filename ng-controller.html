@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="en-us" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script>window.angular || document.write('<script src="js/vendor/angular.min.js"><\/script>')</script>
+        <script src="js/controllers.js"></script>
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <main>
+            <h1>ng-ctonroller</h1>
+            <p><code>ng-controller</code> tells a template to use a particular controller and any models which are inside it.</p>
+            <p>In the <code>&lt;div&gt;</code> below, the attribute <code>ng-controller="MyController"</code> tells AngularJS to use the MyController controller. This makes the data which is in that controller available to be used.</p>
+            <div ng-controller="MyController">
+                <h1>{{author.name}}</h1>
+                <p>{{author.title + ', ' + author.company }}</p>
+            </div>
+        </main>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
